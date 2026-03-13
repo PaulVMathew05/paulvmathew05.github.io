@@ -1,40 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Paul V Mathew</title>
+<meta charset="UTF-8">
+<title>Paul V Mathew | Embedded Systems Engineer</title>
 
 <style>
-body{
-font-family: Arial;
+
+*{
 margin:0;
-background:#f5f5f5;
-text-align:center;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+line-height:1.6;
 }
 
 header{
-background:#111;
-color:white;
-padding:40px;
+padding:60px 20px;
+text-align:center;
+background:#020617;
 }
 
-img{
+header h1{
+font-size:40px;
+margin-bottom:10px;
+}
+
+header p{
+color:#94a3b8;
+font-size:18px;
+}
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+padding:50px 0;
+}
+
+.profile{
+text-align:center;
+}
+
+.profile img{
 width:160px;
 border-radius:50%;
+border:4px solid #38bdf8;
+margin-bottom:20px;
+}
+
+.section-title{
+font-size:30px;
+margin-bottom:30px;
+text-align:center;
+}
+
+.about{
+text-align:center;
+max-width:700px;
+margin:auto;
+color:#cbd5f5;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.project-card{
+background:#1e293b;
+padding:25px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 20px rgba(0,0,0,0.5);
+}
+
+.project-card h3{
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+.skills{
+text-align:center;
+}
+
+.skill-list{
 margin-top:20px;
 }
 
-section{
-padding:40px;
+.skill{
+display:inline-block;
+background:#1e293b;
+padding:10px 18px;
+margin:8px;
+border-radius:20px;
 }
 
-.project{
-background:white;
-margin:20px auto;
-padding:20px;
-width:60%;
-border-radius:10px;
-box-shadow:0 5px 10px rgba(0,0,0,0.1);
+.contact{
+text-align:center;
 }
+
+.contact a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+footer{
+background:#020617;
+text-align:center;
+padding:20px;
+margin-top:40px;
+color:#94a3b8;
+}
+
 </style>
 
 </head>
@@ -43,51 +132,86 @@ box-shadow:0 5px 10px rgba(0,0,0,0.1);
 
 <header>
 <h1>Paul V Mathew</h1>
-<p>IoT | Embedded Systems | AI Hardware Developer</p>
+<p>IoT • Embedded Systems • AI Hardware Developer</p>
 </header>
 
-<section>
+<div class="container profile">
 
 <img src="photo.jpg">
 
 <h2>About Me</h2>
 
-<p>
-Engineering student passionate about IoT, embedded systems and AI-powered hardware.
-I build intelligent systems that combine sensors, computer vision and real-world automation.
+<p class="about">
+I am an engineering student passionate about building intelligent hardware systems
+that combine IoT, embedded electronics and artificial intelligence.
+
+My work focuses on creating real-world solutions using sensors, computer vision,
+microcontrollers and edge computing. I enjoy designing systems where software and
+hardware work together to solve practical problems.
 </p>
 
-</section>
+</div>
 
-<section>
+<div class="container">
 
-<h2>Projects</h2>
+<h2 class="section-title">Projects</h2>
 
-<div class="project">
+<div class="projects">
+
+<div class="project-card">
 <h3>CropXpert</h3>
 <p>
-Smart soil analysis system using NPK, pH, temperature and moisture sensors
-with machine learning based crop recommendation.
+CropXpert is a smart soil analysis system that measures soil parameters such as
+NPK nutrients, pH level, temperature and moisture using sensors. The collected
+data is processed and used in a machine learning model that recommends the most
+suitable crop for the soil.
 </p>
 </div>
 
-<div class="project">
+<div class="project-card">
 <h3>RehabMate</h3>
 <p>
-AI physiotherapy assistant using MediaPipe posture detection and a motorized
-scissor lift system to assist exercises.
+RehabMate is an AI-powered physiotherapy assistant that helps users perform
+exercises like pushups and squats correctly. The system uses MediaPipe pose
+detection and a camera to analyze body posture while a motorized scissor lift
+provides real-time physical support based on movement feedback.
 </p>
 </div>
 
-</section>
+</div>
 
-<section>
+</div>
 
-<h2>Contact</h2>
+<div class="container skills">
 
-<p>GitHub: github.com/PaulVMathew05</p>
+<h2 class="section-title">Skills</h2>
 
-</section>
+<div class="skill-list">
+
+<span class="skill">IoT Systems</span>
+<span class="skill">Embedded Systems</span>
+<span class="skill">ESP32</span>
+<span class="skill">Raspberry Pi</span>
+<span class="skill">Sensor Integration</span>
+<span class="skill">Computer Vision</span>
+<span class="skill">MediaPipe</span>
+<span class="skill">Python</span>
+
+</div>
+
+</div>
+
+<div class="container contact">
+
+<h2 class="section-title">Contact</h2>
+
+<p>GitHub: <a href="https://github.com/PaulVMathew05">github.com/PaulVMathew05</a></p>
+
+</div>
+
+<footer>
+<p>© 2026 Paul V Mathew</p>
+</footer>
 
 </body>
 </html>
