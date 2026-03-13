@@ -3,7 +3,13 @@
 
 <head>
 <meta charset="UTF-8">
-<title>Paul V Mathew | Embedded Systems Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Paul V Mathew | IoT & AI Hardware Engineer</title>
+
+<meta name="description" content="Paul V Mathew - IoT, Embedded Systems and AI Hardware Developer. Creator of CropXpert and RehabMate.">
+
+<link rel="icon" href="photo.jpg">
 
 <style>
 
@@ -11,7 +17,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Segoe UI, sans-serif;
 }
 
 body{
@@ -20,107 +26,139 @@ color:white;
 line-height:1.6;
 }
 
-header{
-padding:60px 20px;
-text-align:center;
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 10%;
 background:#020617;
+position:sticky;
+top:0;
 }
 
-header h1{
-font-size:40px;
-margin-bottom:10px;
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
 }
 
-header p{
-color:#94a3b8;
-font-size:18px;
-}
+/* HERO SECTION */
 
-.container{
-width:90%;
-max-width:1100px;
-margin:auto;
-padding:50px 0;
-}
-
-.profile{
+.hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
+padding:20px;
 }
 
-.profile img{
+.hero img{
 width:160px;
 border-radius:50%;
 border:4px solid #38bdf8;
 margin-bottom:20px;
 }
 
-.section-title{
-font-size:30px;
-margin-bottom:30px;
-text-align:center;
+.hero h1{
+font-size:45px;
 }
 
-.about{
-text-align:center;
-max-width:700px;
-margin:auto;
-color:#cbd5f5;
+.hero p{
+color:#94a3b8;
+margin-top:10px;
 }
+
+.btn{
+margin-top:20px;
+padding:12px 25px;
+background:#38bdf8;
+color:black;
+border:none;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* SECTIONS */
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+padding:70px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:32px;
+margin-bottom:40px;
+}
+
+/* PROJECTS */
 
 .projects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:30px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
-.project-card{
+.project{
 background:#1e293b;
-padding:25px;
-border-radius:12px;
+border-radius:10px;
+overflow:hidden;
 transition:0.3s;
 }
 
-.project-card:hover{
+.project:hover{
 transform:translateY(-5px);
-box-shadow:0 10px 20px rgba(0,0,0,0.5);
 }
 
-.project-card h3{
-color:#38bdf8;
-margin-bottom:10px;
+.project img{
+width:100%;
+height:180px;
+object-fit:cover;
 }
+
+.project-content{
+padding:20px;
+}
+
+.project-content h3{
+color:#38bdf8;
+}
+
+/* SKILLS */
 
 .skills{
 text-align:center;
 }
 
-.skill-list{
-margin-top:20px;
-}
-
 .skill{
 display:inline-block;
-background:#1e293b;
 padding:10px 18px;
 margin:8px;
+background:#1e293b;
 border-radius:20px;
 }
 
-.contact{
-text-align:center;
+/* GITHUB */
+
+.github-project{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+margin-bottom:15px;
 }
 
-.contact a{
-color:#38bdf8;
-text-decoration:none;
-}
+/* FOOTER */
 
 footer{
 background:#020617;
 text-align:center;
 padding:20px;
-margin-top:40px;
 color:#94a3b8;
 }
 
@@ -130,88 +168,151 @@ color:#94a3b8;
 
 <body>
 
-<header>
-<h1>Paul V Mathew</h1>
-<p>IoT • Embedded Systems • AI Hardware Developer</p>
-</header>
+<nav>
+<h3>Paul V Mathew</h3>
+<div>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#github">GitHub</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
 
-<div class="container profile">
+<section class="hero">
 
 <img src="photo.jpg">
 
-<h2>About Me</h2>
+<h1>Paul V Mathew</h1>
 
-<p class="about">
-I am an engineering student passionate about building intelligent hardware systems
-that combine IoT, embedded electronics and artificial intelligence.
+<p>IoT • Embedded Systems • AI Hardware Engineer</p>
 
-My work focuses on creating real-world solutions using sensors, computer vision,
-microcontrollers and edge computing. I enjoy designing systems where software and
-hardware work together to solve practical problems.
-</p>
+<a class="btn" href="resume.pdf">Download Resume</a>
 
-</div>
+</section>
 
-<div class="container">
+<div class="container" id="projects">
 
 <h2 class="section-title">Projects</h2>
 
 <div class="projects">
 
-<div class="project-card">
+<div class="project">
+
+<img src="cropxpert.jpg">
+
+<div class="project-content">
+
 <h3>CropXpert</h3>
+
 <p>
-CropXpert is a smart soil analysis system that measures soil parameters such as
-NPK nutrients, pH level, temperature and moisture using sensors. The collected
-data is processed and used in a machine learning model that recommends the most
-suitable crop for the soil.
+Smart soil analysis system using NPK, pH, temperature and moisture sensors
+combined with machine learning for crop recommendation.
 </p>
+
 </div>
 
-<div class="project-card">
+</div>
+
+<div class="project">
+
+<img src="rehabmate.jpg">
+
+<div class="project-content">
+
 <h3>RehabMate</h3>
+
 <p>
-RehabMate is an AI-powered physiotherapy assistant that helps users perform
-exercises like pushups and squats correctly. The system uses MediaPipe pose
-detection and a camera to analyze body posture while a motorized scissor lift
-provides real-time physical support based on movement feedback.
+AI physiotherapy assistant using MediaPipe posture detection
+and a motorized scissor lift to assist exercises.
 </p>
-</div>
 
 </div>
 
 </div>
 
-<div class="container skills">
+</div>
+
+</div>
+
+<div class="container skills" id="skills">
 
 <h2 class="section-title">Skills</h2>
 
-<div class="skill-list">
-
-<span class="skill">IoT Systems</span>
 <span class="skill">Embedded Systems</span>
 <span class="skill">ESP32</span>
 <span class="skill">Raspberry Pi</span>
-<span class="skill">Sensor Integration</span>
+<span class="skill">IoT Systems</span>
 <span class="skill">Computer Vision</span>
 <span class="skill">MediaPipe</span>
 <span class="skill">Python</span>
+<span class="skill">Sensor Integration</span>
 
 </div>
 
+<div class="container" id="github">
+
+<h2 class="section-title">GitHub Projects</h2>
+
+<div id="repoList"></div>
+
 </div>
 
-<div class="container contact">
+<div class="container" id="contact">
 
 <h2 class="section-title">Contact</h2>
 
-<p>GitHub: <a href="https://github.com/PaulVMathew05">github.com/PaulVMathew05</a></p>
+<p style="text-align:center">
+
+GitHub:
+<a href="https://github.com/PaulVMathew05">
+github.com/PaulVMathew05
+</a>
+
+</p>
 
 </div>
 
 <footer>
+
 <p>© 2026 Paul V Mathew</p>
+
 </footer>
+
+<script>
+
+/* AUTO LOAD GITHUB PROJECTS */
+
+fetch("https://api.github.com/users/PaulVMathew05/repos")
+
+.then(res=>res.json())
+
+.then(data=>{
+
+let output=""
+
+data.slice(0,6).forEach(repo=>{
+
+output+=`
+
+<div class="github-project">
+
+<h3>${repo.name}</h3>
+
+<p>${repo.description || "No description available"}</p>
+
+<a href="${repo.html_url}" target="_blank">View Project</a>
+
+</div>
+
+`
+
+})
+
+document.getElementById("repoList").innerHTML=output
+
+})
+
+</script>
 
 </body>
 </html>
