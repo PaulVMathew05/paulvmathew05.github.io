@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Paul V Mathew | IoT & AI Hardware Engineer</title>
 
-<meta name="description" content="Paul V Mathew - IoT, Embedded Systems and AI Hardware Developer. Creator of CropXpert and RehabMate.">
-
-<link rel="icon" href="photo.jpg">
+<meta name="description" content="Paul V Mathew - Embedded Systems, IoT and AI Hardware Developer. Creator of CropXpert and RehabMate.">
 
 <style>
 
@@ -43,7 +42,7 @@ text-decoration:none;
 margin-left:20px;
 }
 
-/* HERO SECTION */
+/* HERO */
 
 .hero{
 height:90vh;
@@ -52,7 +51,6 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:20px;
 }
 
 .hero img{
@@ -68,7 +66,6 @@ font-size:45px;
 
 .hero p{
 color:#94a3b8;
-margin-top:10px;
 }
 
 .btn{
@@ -76,13 +73,12 @@ margin-top:20px;
 padding:12px 25px;
 background:#38bdf8;
 color:black;
-border:none;
 border-radius:8px;
 text-decoration:none;
 font-weight:bold;
 }
 
-/* SECTIONS */
+/* CONTAINER */
 
 .container{
 width:90%;
@@ -108,26 +104,21 @@ gap:30px;
 .project{
 background:#1e293b;
 border-radius:10px;
-overflow:hidden;
-transition:0.3s;
-}
-
-.project:hover{
-transform:translateY(-5px);
-}
-
-.project img{
-width:100%;
-height:180px;
-object-fit:cover;
-}
-
-.project-content{
 padding:20px;
 }
 
-.project-content h3{
-color:#38bdf8;
+.gallery{
+display:flex;
+gap:10px;
+overflow-x:auto;
+margin-bottom:15px;
+}
+
+.gallery img{
+width:220px;
+height:150px;
+object-fit:cover;
+border-radius:6px;
 }
 
 /* SKILLS */
@@ -138,10 +129,29 @@ text-align:center;
 
 .skill{
 display:inline-block;
+background:#1e293b;
 padding:10px 18px;
 margin:8px;
-background:#1e293b;
 border-radius:20px;
+}
+
+/* CERTIFICATES */
+
+.certificates{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.certificates img{
+width:100%;
+border-radius:10px;
+transition:0.3s;
+cursor:pointer;
+}
+
+.certificates img:hover{
+transform:scale(1.05);
 }
 
 /* GITHUB */
@@ -169,13 +179,19 @@ color:#94a3b8;
 <body>
 
 <nav>
+
 <h3>Paul V Mathew</h3>
+
 <div>
+
 <a href="#projects">Projects</a>
 <a href="#skills">Skills</a>
+<a href="#certificates">Certificates</a>
 <a href="#github">GitHub</a>
 <a href="#contact">Contact</a>
+
 </div>
+
 </nav>
 
 <section class="hero">
@@ -190,6 +206,22 @@ color:#94a3b8;
 
 </section>
 
+<div class="container">
+
+<h2 class="section-title">About Me</h2>
+
+<p style="text-align:center">
+
+I am an engineering student passionate about building intelligent hardware
+systems combining IoT, embedded electronics and artificial intelligence.
+
+My work focuses on real-world systems that integrate sensors, computer
+vision and automation to solve practical problems.
+
+</p>
+
+</div>
+
 <div class="container" id="projects">
 
 <h2 class="section-title">Projects</h2>
@@ -198,35 +230,43 @@ color:#94a3b8;
 
 <div class="project">
 
-<img src="cropxpert.jpg">
+<div class="gallery">
 
-<div class="project-content">
+<img src="crop1.jpg">
+<img src="crop2.jpg">
+
+</div>
 
 <h3>CropXpert</h3>
 
 <p>
-Smart soil analysis system using NPK, pH, temperature and moisture sensors
-combined with machine learning for crop recommendation.
-</p>
 
-</div>
+CropXpert is a smart soil analysis system that measures soil nutrients
+(NPK), pH, temperature and moisture using sensors and applies machine
+learning to recommend the most suitable crop.
+
+</p>
 
 </div>
 
 <div class="project">
 
-<img src="rehabmate.jpg">
+<div class="gallery">
 
-<div class="project-content">
+<img src="rehab1.jpg">
+<img src="rehab2.jpg">
+
+</div>
 
 <h3>RehabMate</h3>
 
 <p>
-AI physiotherapy assistant using MediaPipe posture detection
-and a motorized scissor lift to assist exercises.
-</p>
 
-</div>
+RehabMate is an AI-powered physiotherapy assistant using MediaPipe pose
+detection and a motorized scissor lift system that assists users while
+performing exercises.
+
+</p>
 
 </div>
 
@@ -246,6 +286,25 @@ and a motorized scissor lift to assist exercises.
 <span class="skill">MediaPipe</span>
 <span class="skill">Python</span>
 <span class="skill">Sensor Integration</span>
+
+</div>
+
+<div class="container" id="certificates">
+
+<h2 class="section-title">Certificates</h2>
+
+<div class="certificates">
+
+<a href="cert1.jpg" target="_blank"><img src="cert1.jpg"></a>
+<a href="cert2.jpg" target="_blank"><img src="cert2.jpg"></a>
+<a href="cert3.jpg" target="_blank"><img src="cert3.jpg"></a>
+<a href="cert4.jpg" target="_blank"><img src="cert4.jpg"></a>
+<a href="cert5.jpg" target="_blank"><img src="cert5.jpg"></a>
+<a href="cert6.jpg" target="_blank"><img src="cert6.jpg"></a>
+<a href="cert7.jpg" target="_blank"><img src="cert7.jpg"></a>
+<a href="cert8.jpg" target="_blank"><img src="cert8.jpg"></a>
+
+</div>
 
 </div>
 
@@ -280,8 +339,6 @@ github.com/PaulVMathew05
 
 <script>
 
-/* AUTO LOAD GITHUB PROJECTS */
-
 fetch("https://api.github.com/users/PaulVMathew05/repos")
 
 .then(res=>res.json())
@@ -300,7 +357,7 @@ output+=`
 
 <p>${repo.description || "No description available"}</p>
 
-<a href="${repo.html_url}" target="_blank">View Project</a>
+<a href="${repo.html_url}" target="_blank">View Repository</a>
 
 </div>
 
@@ -315,4 +372,5 @@ document.getElementById("repoList").innerHTML=output
 </script>
 
 </body>
+
 </html>
