@@ -10,17 +10,19 @@
 
 <meta name="description" content="Portfolio of Paul V Mathew - Embedded Systems, IoT and AI Hardware Developer">
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Segoe UI, sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0f172a;
+background:linear-gradient(135deg,#020617,#0f172a);
 color:white;
 line-height:1.6;
 }
@@ -30,16 +32,29 @@ line-height:1.6;
 nav{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:20px 10%;
-background:#020617;
+background:rgba(2,6,23,0.8);
+backdrop-filter:blur(10px);
 position:sticky;
 top:0;
+z-index:100;
+}
+
+nav h3{
+font-weight:600;
 }
 
 nav a{
-color:white;
+color:#cbd5f5;
 text-decoration:none;
-margin-left:20px;
+margin-left:25px;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
 }
 
 /* HERO */
@@ -54,43 +69,53 @@ text-align:center;
 }
 
 .hero img{
-width:160px;
+width:170px;
 border-radius:50%;
 border:4px solid #38bdf8;
-margin-bottom:20px;
+margin-bottom:25px;
+box-shadow:0 0 20px rgba(56,189,248,0.4);
 }
 
 .hero h1{
-font-size:45px;
+font-size:48px;
+font-weight:600;
 }
 
 .hero p{
 color:#94a3b8;
+margin-top:10px;
+font-size:18px;
 }
 
 .btn{
-margin-top:20px;
-padding:12px 25px;
+margin-top:25px;
+padding:14px 28px;
 background:#38bdf8;
-color:black;
+color:#020617;
 border-radius:8px;
 text-decoration:none;
-font-weight:bold;
+font-weight:600;
+transition:0.3s;
 }
 
-/* SECTIONS */
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 6px 20px rgba(56,189,248,0.4);
+}
+
+/* SECTION */
 
 .container{
 width:90%;
 max-width:1100px;
 margin:auto;
-padding:70px 0;
+padding:80px 0;
 }
 
 .section-title{
 text-align:center;
-font-size:32px;
-margin-bottom:40px;
+font-size:34px;
+margin-bottom:45px;
 }
 
 /* PROJECTS */
@@ -98,13 +123,20 @@ margin-bottom:40px;
 .projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+gap:35px;
 }
 
 .project{
-background:#1e293b;
-border-radius:10px;
+background:rgba(30,41,59,0.6);
 padding:20px;
+border-radius:12px;
+backdrop-filter:blur(8px);
+transition:0.3s;
+}
+
+.project:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 .gallery{
@@ -132,7 +164,8 @@ display:inline-block;
 background:#1e293b;
 padding:10px 18px;
 margin:8px;
-border-radius:20px;
+border-radius:25px;
+font-size:14px;
 }
 
 /* CERTIFICATES */
@@ -140,7 +173,7 @@ border-radius:20px;
 .certificates{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+gap:25px;
 }
 
 .certificates img{
@@ -152,6 +185,7 @@ cursor:pointer;
 
 .certificates img:hover{
 transform:scale(1.05);
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
 }
 
 /* GITHUB */
@@ -161,6 +195,11 @@ background:#1e293b;
 padding:20px;
 border-radius:10px;
 margin-bottom:15px;
+transition:0.3s;
+}
+
+.github-project:hover{
+transform:translateY(-4px);
 }
 
 /* FOOTER */
@@ -168,8 +207,9 @@ margin-bottom:15px;
 footer{
 background:#020617;
 text-align:center;
-padding:20px;
+padding:25px;
 color:#94a3b8;
+margin-top:40px;
 }
 
 </style>
@@ -183,13 +223,11 @@ color:#94a3b8;
 <h3>Paul V Mathew</h3>
 
 <div>
-
 <a href="#projects">Projects</a>
 <a href="#skills">Skills</a>
 <a href="#certificates">Certificates</a>
 <a href="#github">GitHub</a>
 <a href="#contact">Contact</a>
-
 </div>
 
 </nav>
@@ -210,11 +248,11 @@ color:#94a3b8;
 
 <h2 class="section-title">About Me</h2>
 
-<p style="text-align:center">
+<p style="text-align:center;max-width:700px;margin:auto;color:#cbd5f5">
 
-Engineering student passionate about IoT, embedded systems and AI-powered
-hardware systems. I build intelligent solutions combining sensors,
-computer vision and automation.
+Engineering student passionate about building intelligent hardware
+systems that combine IoT, embedded electronics and artificial
+intelligence to solve real-world problems.
 
 </p>
 
@@ -229,19 +267,14 @@ computer vision and automation.
 <div class="project">
 
 <div class="gallery">
-
 <img src="crop1.jpg">
 <img src="crop2.jpg">
-
 </div>
 
-<h3>CropXpert</h3>
+<h3 style="color:#38bdf8">CropXpert</h3>
 
 <p>
-
-Smart soil analysis system using NPK, pH, temperature and moisture
-sensors combined with machine learning for crop recommendation.
-
+Smart soil analysis system using NPK, pH, temperature and moisture sensors combined with machine learning for crop recommendation.
 </p>
 
 </div>
@@ -249,19 +282,14 @@ sensors combined with machine learning for crop recommendation.
 <div class="project">
 
 <div class="gallery">
-
 <img src="rehab1.jpg">
 <img src="rehab2.jpg">
-
 </div>
 
-<h3>RehabMate</h3>
+<h3 style="color:#38bdf8">RehabMate</h3>
 
 <p>
-
-AI physiotherapy assistant using MediaPipe posture detection and
-a motorized scissor lift to assist exercises.
-
+AI physiotherapy assistant using MediaPipe posture detection and a motorized scissor lift to assist exercises.
 </p>
 
 </div>
@@ -319,7 +347,7 @@ a motorized scissor lift to assist exercises.
 <p style="text-align:center">
 
 GitHub:
-<a href="https://github.com/PaulVMathew05">
+<a style="color:#38bdf8" href="https://github.com/PaulVMathew05">
 github.com/PaulVMathew05
 </a>
 
@@ -353,7 +381,7 @@ output+=`
 
 <p>${repo.description || "No description available"}</p>
 
-<a href="${repo.html_url}" target="_blank">View Repository</a>
+<a style="color:#38bdf8" href="${repo.html_url}" target="_blank">View Repository</a>
 
 </div>
 
@@ -368,5 +396,4 @@ document.getElementById("repoList").innerHTML=output
 </script>
 
 </body>
-
 </html>
