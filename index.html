@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Paul V Mathew | IoT & AI Hardware Engineer</title>
+<title>Paul V Mathew | IoT & AI Engineer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -17,10 +16,11 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:#f4f7fb;
+background:linear-gradient(135deg,#eef2ff,#f8fafc);
 color:#1e293b;
 }
 
@@ -31,10 +31,15 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:15px 8%;
-background:white;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
+background:rgba(255,255,255,0.7);
+backdrop-filter:blur(10px);
 position:sticky;
 top:0;
+z-index:1000;
+}
+
+nav h3{
+font-weight:600;
 }
 
 nav ul{
@@ -49,7 +54,7 @@ margin-left:20px;
 nav a{
 text-decoration:none;
 color:#334155;
-font-weight:500;
+transition:0.3s;
 }
 
 nav a:hover{
@@ -62,49 +67,55 @@ color:#2563eb;
 display:flex;
 flex-direction:column;
 align-items:center;
-justify-content:center;
 text-align:center;
-padding:60px 20px;
+padding:80px 20px;
 }
-
-/* RECTANGLE PROFILE IMAGE */
 
 .profile-pic{
 width:260px;
-height:auto;
-border-radius:12px;
+border-radius:15px;
 overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.15);
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
 border:4px solid #2563eb;
-margin-bottom:20px;
-background:white;
+transition:0.4s;
+}
+
+.profile-pic:hover{
+transform:scale(1.05);
 }
 
 .profile-pic img{
 width:100%;
-height:auto;
 display:block;
 }
 
-/* TEXT */
-
 .hero h1{
-font-size:36px;
+font-size:40px;
+margin-top:20px;
+background:linear-gradient(90deg,#2563eb,#9333ea);
+-webkit-background-clip:text;
+color:transparent;
 }
 
 .hero p{
+margin-top:10px;
 color:#64748b;
-margin-top:8px;
 }
 
 .btn{
-margin-top:20px;
-padding:12px 24px;
-background:#2563eb;
+margin-top:25px;
+padding:12px 28px;
+background:linear-gradient(90deg,#2563eb,#7c3aed);
 color:white;
-border-radius:8px;
+border-radius:30px;
 text-decoration:none;
 font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
 }
 
 /* SECTIONS */
@@ -113,28 +124,34 @@ font-weight:600;
 width:90%;
 max-width:1100px;
 margin:auto;
-padding:60px 0;
+padding:70px 0;
 }
 
 .section-title{
 text-align:center;
-font-size:28px;
-margin-bottom:35px;
+font-size:30px;
+margin-bottom:40px;
 }
 
 /* PROJECTS */
 
 .projects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
 .project{
-background:white;
+background:rgba(255,255,255,0.6);
+backdrop-filter:blur(10px);
 padding:20px;
-border-radius:12px;
-box-shadow:0 5px 25px rgba(0,0,0,0.05);
+border-radius:15px;
+transition:0.3s;
+}
+
+.project:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
 .gallery{
@@ -148,7 +165,7 @@ margin-bottom:15px;
 width:200px;
 height:130px;
 object-fit:cover;
-border-radius:6px;
+border-radius:8px;
 }
 
 /* SKILLS */
@@ -159,11 +176,19 @@ text-align:center;
 
 .skill{
 display:inline-block;
-background:#e2e8f0;
+background:white;
 padding:10px 18px;
-margin:6px;
-border-radius:20px;
+margin:8px;
+border-radius:25px;
 font-size:14px;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.skill:hover{
+background:#2563eb;
+color:white;
+transform:scale(1.1);
 }
 
 /* CERTIFICATES */
@@ -176,32 +201,35 @@ gap:20px;
 
 .certificates img{
 width:100%;
-border-radius:8px;
+border-radius:10px;
 transition:0.3s;
 }
 
 .certificates img:hover{
-transform:scale(1.05);
+transform:scale(1.08);
 }
 
 /* GITHUB */
 
 .github-project{
 background:white;
-padding:18px;
-border-radius:10px;
+padding:20px;
+border-radius:12px;
 margin-bottom:15px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.github-project:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* FOOTER */
 
 footer{
-background:white;
 text-align:center;
-padding:20px;
+padding:25px;
 color:#64748b;
-border-top:1px solid #e2e8f0;
 }
 
 /* MOBILE */
@@ -214,11 +242,6 @@ font-size:28px;
 
 .profile-pic{
 width:200px;
-}
-
-.gallery img{
-width:150px;
-height:100px;
 }
 
 nav ul{
@@ -234,9 +257,7 @@ display:none;
 <body>
 
 <nav>
-
 <h3>Paul V Mathew</h3>
-
 <ul>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#skills">Skills</a></li>
@@ -244,7 +265,6 @@ display:none;
 <li><a href="#github">GitHub</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
-
 </nav>
 
 <section class="hero">
@@ -266,11 +286,8 @@ display:none;
 <h2 class="section-title">About Me</h2>
 
 <p style="text-align:center;max-width:700px;margin:auto;color:#475569">
-
 Engineering student passionate about building intelligent hardware systems
-combining IoT, embedded electronics and artificial intelligence to solve
-real-world problems.
-
+combining IoT, embedded electronics and artificial intelligence to solve real-world problems.
 </p>
 
 </div>
@@ -282,35 +299,21 @@ real-world problems.
 <div class="projects">
 
 <div class="project">
-
 <div class="gallery">
 <img src="crop1.jpg">
 <img src="crop2.jpg">
 </div>
-
 <h3 style="color:#2563eb">CropXpert</h3>
-
-<p>
-Smart soil analysis system using NPK, pH, temperature and moisture sensors
-combined with machine learning for crop recommendation.
-</p>
-
+<p>Smart soil analysis system using NPK, pH, temperature and moisture sensors with ML crop recommendation.</p>
 </div>
 
 <div class="project">
-
 <div class="gallery">
 <img src="rehab1.jpg">
 <img src="rehab2.jpg">
 </div>
-
 <h3 style="color:#2563eb">RehabMate</h3>
-
-<p>
-AI physiotherapy assistant using MediaPipe posture detection and
-a motorized scissor lift to assist exercises.
-</p>
-
+<p>AI physiotherapy assistant using MediaPipe posture detection and motorized scissor lift.</p>
 </div>
 
 </div>
@@ -338,14 +341,10 @@ a motorized scissor lift to assist exercises.
 
 <div class="certificates">
 
-<a href="cert1.jpg" target="_blank"><img src="cert1.jpg"></a>
-<a href="cert2.jpg" target="_blank"><img src="cert2.jpg"></a>
-<a href="cert3.jpg" target="_blank"><img src="cert3.jpg"></a>
-<a href="cert4.jpg" target="_blank"><img src="cert4.jpg"></a>
-<a href="cert5.jpg" target="_blank"><img src="cert5.jpg"></a>
-<a href="cert6.jpg" target="_blank"><img src="cert6.jpg"></a>
-<a href="cert7.jpg" target="_blank"><img src="cert7.jpg"></a>
-<a href="cert8.jpg" target="_blank"><img src="cert8.jpg"></a>
+<img src="cert1.jpg">
+<img src="cert2.jpg">
+<img src="cert3.jpg">
+<img src="cert4.jpg">
 
 </div>
 
@@ -364,12 +363,10 @@ a motorized scissor lift to assist exercises.
 <h2 class="section-title">Contact</h2>
 
 <p style="text-align:center">
-
 GitHub:
 <a style="color:#2563eb" href="https://github.com/PaulVMathew05">
 github.com/PaulVMathew05
 </a>
-
 </p>
 
 </div>
@@ -389,17 +386,11 @@ let output=""
 data.slice(0,6).forEach(repo=>{
 
 output+=`
-
 <div class="github-project">
-
 <h3>${repo.name}</h3>
-
 <p>${repo.description || "No description available"}</p>
-
 <a style="color:#2563eb" href="${repo.html_url}" target="_blank">View Repository</a>
-
 </div>
-
 `
 
 })
