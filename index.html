@@ -1,471 +1,145 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paul V Mathew | IoT & AI Hardware Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+html{scroll-behavior:smooth;}
+body{background:linear-gradient(-45deg,#f4f7fb,#e0f2fe,#f8fafc,#dbeafe);background-size:400% 400%;animation:gradientBG 10s ease infinite;color:#1e293b;}
+@keyframes gradientBG{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+nav{display:flex;justify-content:space-between;align-items:center;padding:15px 8%;background:white;box-shadow:0 2px 10px rgba(0,0,0,0.05);position:sticky;top:0;z-index:100;}
+nav ul{display:flex;list-style:none;}
+nav ul li{margin-left:20px;}
+nav a{text-decoration:none;color:#334155;font-weight:500;}
+nav a:hover{color:#2563eb;}
+.hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 20px;}
+.profile-pic{width:260px;border-radius:12px;overflow:hidden;border:4px solid #2563eb;box-shadow:0 0 25px rgba(37,99,235,0.4);transition:0.3s;margin-bottom:20px;background:white;}
+.profile-pic:hover{transform:scale(1.05);box-shadow:0 0 40px rgba(37,99,235,0.6);}
+.profile-pic img{width:100%;height:auto;display:block;}
+.hero h1{font-size:36px;}
+.hero p{color:#64748b;margin-top:8px;}
+.btn{margin-top:20px;padding:12px 24px;background:#2563eb;color:white;border-radius:8px;text-decoration:none;font-weight:600;transition:0.3s;}
+.btn:hover{transform:translateY(-3px);}
+.container{width:90%;max-width:1100px;margin:auto;padding:60px 0;opacity:0;transform:translateY(30px);animation:fadeIn 1s ease forwards;}
+@keyframes fadeIn{to{opacity:1;transform:translateY(0);}}
+.section-title{text-align:center;font-size:28px;margin-bottom:35px;}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;}
+.project{background:white;padding:20px;border-radius:12px;box-shadow:0 5px 25px rgba(0,0,0,0.05);transition:all 0.3s ease;cursor:pointer;display:flex;flex-direction:column;}
+.project:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 15px 40px rgba(37,99,235,0.2);}
+.project h3{color:#2563eb;margin-bottom:8px;}
+.project .meta{font-size:13px;color:#64748b;margin-top:10px;}
+.project a.repo-link{display:inline-block;margin-top:14px;color:#2563eb;text-decoration:none;font-weight:600;font-size:14px;}
+.loading{text-align:center;color:#64748b;grid-column:1/-1;}
+.skills{text-align:center;}
+.skill{display:inline-block;background:#e2e8f0;padding:10px 18px;margin:6px;border-radius:20px;font-size:14px;}
+.certificates{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;}
+.certificates img{width:100%;border-radius:8px;transition:0.3s;}
+.certificates img:hover{transform:scale(1.05);}
+.github-project{background:white;padding:18px;border-radius:10px;margin-bottom:15px;box-shadow:0 5px 20px rgba(0,0,0,0.05);}
+footer{background:white;text-align:center;padding:20px;color:#64748b;border-top:1px solid #e2e8f0;}
+@media(max-width:768px){.hero h1{font-size:28px;}.profile-pic{width:200px;}nav ul{display:none;}}
+</style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="en"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1">&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;title&gt;Paul V Mathew | IoT &amp; AI Hardware Engineer&lt;/title&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap" rel="stylesheet"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">*{</p>
-<p class="p1">margin:0;</p>
-<p class="p1">padding:0;</p>
-<p class="p1">box-sizing:border-box;</p>
-<p class="p1">font-family:'Poppins',sans-serif;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">html{</p>
-<p class="p1">scroll-behavior:smooth;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">body{</p>
-<p class="p1">background: linear-gradient(-45deg, #f4f7fb, #e0f2fe, #f8fafc, #dbeafe);</p>
-<p class="p1">background-size: 400% 400%;</p>
-<p class="p1">animation: gradientBG 10s ease infinite;</p>
-<p class="p1">color:#1e293b;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">@keyframes gradientBG {</p>
-<p class="p1">0% {background-position: 0% 50%;}</p>
-<p class="p1">50% {background-position: 100% 50%;}</p>
-<p class="p1">100% {background-position: 0% 50%;}</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* NAVBAR */</p>
-<p class="p2"><br></p>
-<p class="p1">nav{</p>
-<p class="p1">display:flex;</p>
-<p class="p1">justify-content:space-between;</p>
-<p class="p1">align-items:center;</p>
-<p class="p1">padding:15px 8%;</p>
-<p class="p1">background:white;</p>
-<p class="p1">box-shadow:0 2px 10px rgba(0,0,0,0.05);</p>
-<p class="p1">position:sticky;</p>
-<p class="p1">top:0;</p>
-<p class="p1">z-index:100;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">nav ul{</p>
-<p class="p1">display:flex;</p>
-<p class="p1">list-style:none;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">nav ul li{</p>
-<p class="p1">margin-left:20px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">nav a{</p>
-<p class="p1">text-decoration:none;</p>
-<p class="p1">color:#334155;</p>
-<p class="p1">font-weight:500;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">nav a:hover{</p>
-<p class="p1">color:#2563eb;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* HERO */</p>
-<p class="p2"><br></p>
-<p class="p1">.hero{</p>
-<p class="p1">display:flex;</p>
-<p class="p1">flex-direction:column;</p>
-<p class="p1">align-items:center;</p>
-<p class="p1">justify-content:center;</p>
-<p class="p1">text-align:center;</p>
-<p class="p1">padding:60px 20px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* PROFILE */</p>
-<p class="p2"><br></p>
-<p class="p1">.profile-pic{</p>
-<p class="p1">width:260px;</p>
-<p class="p1">border-radius:12px;</p>
-<p class="p1">overflow:hidden;</p>
-<p class="p1">border:4px solid #2563eb;</p>
-<p class="p1">box-shadow:0 0 25px rgba(37,99,235,0.4);</p>
-<p class="p1">transition:0.3s;</p>
-<p class="p1">margin-bottom:20px;</p>
-<p class="p1">background:white;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.profile-pic:hover{</p>
-<p class="p1">transform:scale(1.05);</p>
-<p class="p1">box-shadow:0 0 40px rgba(37,99,235,0.6);</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.profile-pic img{</p>
-<p class="p1">width:100%;</p>
-<p class="p1">height:auto;</p>
-<p class="p1">display:block;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* TEXT */</p>
-<p class="p2"><br></p>
-<p class="p1">.hero h1{</p>
-<p class="p1">font-size:36px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.hero p{</p>
-<p class="p1">color:#64748b;</p>
-<p class="p1">margin-top:8px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.btn{</p>
-<p class="p1">margin-top:20px;</p>
-<p class="p1">padding:12px 24px;</p>
-<p class="p1">background:#2563eb;</p>
-<p class="p1">color:white;</p>
-<p class="p1">border-radius:8px;</p>
-<p class="p1">text-decoration:none;</p>
-<p class="p1">font-weight:600;</p>
-<p class="p1">transition:0.3s;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.btn:hover{</p>
-<p class="p1">transform:translateY(-3px);</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* CONTAINER */</p>
-<p class="p2"><br></p>
-<p class="p1">.container{</p>
-<p class="p1">width:90%;</p>
-<p class="p1">max-width:1100px;</p>
-<p class="p1">margin:auto;</p>
-<p class="p1">padding:60px 0;</p>
-<p class="p1">opacity:0;</p>
-<p class="p1">transform:translateY(30px);</p>
-<p class="p1">animation:fadeIn 1s ease forwards;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">@keyframes fadeIn{</p>
-<p class="p1">to{</p>
-<p class="p1">opacity:1;</p>
-<p class="p1">transform:translateY(0);</p>
-<p class="p1">}</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.section-title{</p>
-<p class="p1">text-align:center;</p>
-<p class="p1">font-size:28px;</p>
-<p class="p1">margin-bottom:35px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* PROJECTS */</p>
-<p class="p2"><br></p>
-<p class="p1">.projects{</p>
-<p class="p1">display:grid;</p>
-<p class="p1">grid-template-columns:repeat(auto-fit,minmax(260px,1fr));</p>
-<p class="p1">gap:25px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.project{</p>
-<p class="p1">background:white;</p>
-<p class="p1">padding:20px;</p>
-<p class="p1">border-radius:12px;</p>
-<p class="p1">box-shadow:0 5px 25px rgba(0,0,0,0.05);</p>
-<p class="p1">transition:all 0.3s ease;</p>
-<p class="p1">cursor:pointer;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.project:hover{</p>
-<p class="p1">transform:translateY(-10px) scale(1.02);</p>
-<p class="p1">box-shadow:0 15px 40px rgba(37,99,235,0.2);</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.gallery{</p>
-<p class="p1">display:flex;</p>
-<p class="p1">gap:10px;</p>
-<p class="p1">overflow-x:auto;</p>
-<p class="p1">margin-bottom:15px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.gallery img{</p>
-<p class="p1">width:200px;</p>
-<p class="p1">height:130px;</p>
-<p class="p1">object-fit:cover;</p>
-<p class="p1">border-radius:6px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.project a.repo-link{</p>
-<p class="p1">display:inline-block;</p>
-<p class="p1">margin-top:12px;</p>
-<p class="p1">color:#2563eb;</p>
-<p class="p1">text-decoration:none;</p>
-<p class="p1">font-weight:600;</p>
-<p class="p1">font-size:14px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* SKILLS */</p>
-<p class="p2"><br></p>
-<p class="p1">.skills{</p>
-<p class="p1">text-align:center;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.skill{</p>
-<p class="p1">display:inline-block;</p>
-<p class="p1">background:#e2e8f0;</p>
-<p class="p1">padding:10px 18px;</p>
-<p class="p1">margin:6px;</p>
-<p class="p1">border-radius:20px;</p>
-<p class="p1">font-size:14px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* CERTIFICATES */</p>
-<p class="p2"><br></p>
-<p class="p1">.certificates{</p>
-<p class="p1">display:grid;</p>
-<p class="p1">grid-template-columns:repeat(auto-fit,minmax(180px,1fr));</p>
-<p class="p1">gap:20px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.certificates img{</p>
-<p class="p1">width:100%;</p>
-<p class="p1">border-radius:8px;</p>
-<p class="p1">transition:0.3s;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.certificates img:hover{</p>
-<p class="p1">transform:scale(1.05);</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* GITHUB */</p>
-<p class="p2"><br></p>
-<p class="p1">.github-project{</p>
-<p class="p1">background:white;</p>
-<p class="p1">padding:18px;</p>
-<p class="p1">border-radius:10px;</p>
-<p class="p1">margin-bottom:15px;</p>
-<p class="p1">box-shadow:0 5px 20px rgba(0,0,0,0.05);</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* FOOTER */</p>
-<p class="p2"><br></p>
-<p class="p1">footer{</p>
-<p class="p1">background:white;</p>
-<p class="p1">text-align:center;</p>
-<p class="p1">padding:20px;</p>
-<p class="p1">color:#64748b;</p>
-<p class="p1">border-top:1px solid #e2e8f0;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">/* MOBILE */</p>
-<p class="p2"><br></p>
-<p class="p1">@media(max-width:768px){</p>
-<p class="p2"><br></p>
-<p class="p1">.hero h1{</p>
-<p class="p1">font-size:28px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.profile-pic{</p>
-<p class="p1">width:200px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.gallery img{</p>
-<p class="p1">width:150px;</p>
-<p class="p1">height:100px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">nav ul{</p>
-<p class="p1">display:none;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;nav&gt;</p>
-<p class="p1">&lt;h3&gt;Paul V Mathew&lt;/h3&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;ul&gt;</p>
-<p class="p1">&lt;li&gt;&lt;a href="#projects"&gt;Projects&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1">&lt;li&gt;&lt;a href="#skills"&gt;Skills&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1">&lt;li&gt;&lt;a href="#certificates"&gt;Certificates&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1">&lt;li&gt;&lt;a href="#github"&gt;GitHub&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1">&lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;</p>
-<p class="p1">&lt;/ul&gt;</p>
-<p class="p1">&lt;/nav&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;section class="hero"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="profile-pic"&gt;</p>
-<p class="p1">&lt;img src="photo.jpg"&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h1&gt;Paul V Mathew&lt;/h1&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;p&gt;IoT • Embedded Systems • AI Hardware Engineer&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;a class="btn" href="resume.pdf"&gt;Download Resume&lt;/a&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/section&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="container"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h2 class="section-title"&gt;About Me&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;p style="text-align:center;max-width:700px;margin:auto;color:#475569"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">Engineering student passionate about building intelligent hardware systems</p>
-<p class="p1">combining IoT, embedded electronics and artificial intelligence to solve</p>
-<p class="p1">real-world problems.</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="container" id="projects"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h2 class="section-title"&gt;Projects&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="projects"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="project"&gt;</p>
-<p class="p1">&lt;div class="gallery"&gt;</p>
-<p class="p1">&lt;img src="crop1.jpg"&gt;</p>
-<p class="p1">&lt;img src="crop2.jpg"&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h3 style="color:#2563eb"&gt;CropXpert&lt;/h3&gt;</p>
-<p class="p1">&lt;p&gt;Smart soil analysis system with ML crop recommendation.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="project"&gt;</p>
-<p class="p1">&lt;div class="gallery"&gt;</p>
-<p class="p1">&lt;img src="rehab1.jpg"&gt;</p>
-<p class="p1">&lt;img src="rehab2.jpg"&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h3 style="color:#2563eb"&gt;RehabMate&lt;/h3&gt;</p>
-<p class="p1">&lt;p&gt;AI physiotherapy assistant using pose detection.&lt;/p&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="project"&gt;</p>
-<p class="p1">&lt;div class="gallery"&gt;</p>
-<p class="p1">&lt;img src="warehouse1.jpg"&gt;</p>
-<p class="p1">&lt;img src="warehouse2.jpg"&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h3 style="color:#2563eb"&gt;Warehouse Automation with Autonomous Robots&lt;/h3&gt;</p>
-<p class="p1">&lt;p&gt;Autonomous mobile robot (AMR) warehouse system simulated in NVIDIA Isaac Sim with ROS2 navigation, plus a live monitoring dashboard.&lt;/p&gt;</p>
-<p class="p1">&lt;a class="repo-link" href="https://github.com/PaulVMathew05/Warehouse-Automation-with-Autonomous-Robots" target="_blank"&gt;View Repository →&lt;/a&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="project"&gt;</p>
-<p class="p1">&lt;div class="gallery"&gt;</p>
-<p class="p1">&lt;img src="https://raw.githubusercontent.com/PaulVMathew05/raytracer/main/image.png"&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h3 style="color:#2563eb"&gt;Ray Tracer&lt;/h3&gt;</p>
-<p class="p1">&lt;p&gt;Path-traced 3D renderer written from scratch in C++ with no graphics libraries — matte, metal, and glass materials, anti-aliasing, and depth-of-field.&lt;/p&gt;</p>
-<p class="p1">&lt;a class="repo-link" href="https://github.com/PaulVMathew05/raytracer" target="_blank"&gt;View Repository →&lt;/a&gt;</p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="container skills" id="skills"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h2 class="section-title"&gt;Skills&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;span class="skill"&gt;Embedded Systems&lt;/span&gt;</p>
-<p class="p1">&lt;span class="skill"&gt;ESP32&lt;/span&gt;</p>
-<p class="p1">&lt;span class="skill"&gt;Raspberry Pi&lt;/span&gt;</p>
-<p class="p1">&lt;span class="skill"&gt;IoT&lt;/span&gt;</p>
-<p class="p1">&lt;span class="skill"&gt;Computer Vision&lt;/span&gt;</p>
-<p class="p1">&lt;span class="skill"&gt;Python&lt;/span&gt;</p>
-<p class="p1">&lt;span class="skill"&gt;C++&lt;/span&gt;</p>
-<p class="p1">&lt;span class="skill"&gt;ROS2&lt;/span&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="container" id="certificates"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h2 class="section-title"&gt;Certificates&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="certificates"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;a href="cert1.jpg" target="_blank"&gt;&lt;img src="cert1.jpg"&gt;&lt;/a&gt;</p>
-<p class="p1">&lt;a href="cert2.jpg" target="_blank"&gt;&lt;img src="cert2.jpg"&gt;&lt;/a&gt;</p>
-<p class="p1">&lt;a href="cert3.jpg" target="_blank"&gt;&lt;img src="cert3.jpg"&gt;&lt;/a&gt;</p>
-<p class="p1">&lt;a href="cert4.jpg" target="_blank"&gt;&lt;img src="cert4.jpg"&gt;&lt;/a&gt;</p>
-<p class="p1">&lt;a href="cert5.jpg" target="_blank"&gt;&lt;img src="cert5.jpg"&gt;&lt;/a&gt;</p>
-<p class="p1">&lt;a href="cert6.jpg" target="_blank"&gt;&lt;img src="cert6.jpg"&gt;&lt;/a&gt;</p>
-<p class="p1">&lt;a href="cert7.jpg" target="_blank"&gt;&lt;img src="cert7.jpg"&gt;&lt;/a&gt;</p>
-<p class="p1">&lt;a href="cert8.jpg" target="_blank"&gt;&lt;img src="cert8.jpg"&gt;&lt;/a&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="container" id="github"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h2 class="section-title"&gt;GitHub Projects&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div id="repoList"&gt;&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="container" id="contact"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h2 class="section-title"&gt;Contact&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;p style="text-align:center"&gt;</p>
-<p class="p1">GitHub:</p>
-<p class="p1">&lt;a style="color:#2563eb" href="https://github.com/PaulVMathew05"&gt;</p>
-<p class="p1">github.com/PaulVMathew05</p>
-<p class="p1">&lt;/a&gt;</p>
-<p class="p1">&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;footer&gt;</p>
-<p class="p1">&lt;p&gt;© 2026 Paul V Mathew&lt;/p&gt;</p>
-<p class="p1">&lt;/footer&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">fetch("https://api.github.com/users/PaulVMathew05/repos")</p>
-<p class="p1">.then(res=&gt;res.json())</p>
-<p class="p1">.then(data=&gt;{</p>
-<p class="p1">let output=""</p>
-<p class="p1">data.slice(0,6).forEach(repo=&gt;{</p>
-<p class="p1">output+=`</p>
-<p class="p1">&lt;div class="github-project"&gt;</p>
-<p class="p1">&lt;h3&gt;${repo.name}&lt;/h3&gt;</p>
-<p class="p1">&lt;p&gt;${repo.description || "No description available"}&lt;/p&gt;</p>
-<p class="p1">&lt;a style="color:#2563eb" href="${repo.html_url}" target="_blank"&gt;View Repository&lt;/a&gt;</p>
-<p class="p1">&lt;/div&gt;`</p>
-<p class="p1">})</p>
-<p class="p1">document.getElementById("repoList").innerHTML=output</p>
-<p class="p1">})</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<nav>
+<h3>Paul V Mathew</h3>
+<ul>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#certificates">Certificates</a></li>
+<li><a href="#github">GitHub</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<section class="hero">
+<div class="profile-pic"><img src="photo.jpg"></div>
+<h1>Paul V Mathew</h1>
+<p>IoT • Embedded Systems • AI Hardware Engineer</p>
+<a class="btn" href="resume.pdf">Download Resume</a>
+</section>
+<div class="container">
+<h2 class="section-title">About Me</h2>
+<p style="text-align:center;max-width:700px;margin:auto;color:#475569">
+Engineering student passionate about building intelligent hardware systems combining IoT, embedded electronics and artificial intelligence to solve real-world problems.
+</p>
+</div>
+<div class="container" id="projects">
+<h2 class="section-title">Projects</h2>
+<p style="text-align:center;color:#94a3b8;margin-top:-20px;margin-bottom:30px;font-size:14px">
+&#11088; Star any repository on GitHub and it appears here automatically.
+</p>
+<div class="projects" id="projectList">
+<p class="loading">Loading projects&hellip;</p>
+</div>
+</div>
+<div class="container skills" id="skills">
+<h2 class="section-title">Skills</h2>
+<span class="skill">Embedded Systems</span>
+<span class="skill">ESP32</span>
+<span class="skill">Raspberry Pi</span>
+<span class="skill">IoT</span>
+<span class="skill">Computer Vision</span>
+<span class="skill">Python</span>
+<span class="skill">C++</span>
+<span class="skill">ROS2</span>
+</div>
+<div class="container" id="certificates">
+<h2 class="section-title">Certificates</h2>
+<div class="certificates">
+<a href="cert1.jpg" target="_blank"><img src="cert1.jpg"></a>
+<a href="cert2.jpg" target="_blank"><img src="cert2.jpg"></a>
+<a href="cert3.jpg" target="_blank"><img src="cert3.jpg"></a>
+<a href="cert4.jpg" target="_blank"><img src="cert4.jpg"></a>
+<a href="cert5.jpg" target="_blank"><img src="cert5.jpg"></a>
+<a href="cert6.jpg" target="_blank"><img src="cert6.jpg"></a>
+<a href="cert7.jpg" target="_blank"><img src="cert7.jpg"></a>
+<a href="cert8.jpg" target="_blank"><img src="cert8.jpg"></a>
+</div>
+</div>
+<div class="container" id="github">
+<h2 class="section-title">All GitHub Repositories</h2>
+<div id="repoList"></div>
+</div>
+<div class="container" id="contact">
+<h2 class="section-title">Contact</h2>
+<p style="text-align:center">
+GitHub: <a style="color:#2563eb" href="https://github.com/PaulVMathew05">github.com/PaulVMathew05</a>
+</p>
+</div>
+<footer><p>&copy; 2026 Paul V Mathew</p></footer>
+<script>
+fetch("https://api.github.com/users/PaulVMathew05/starred")
+.then(res=>res.json())
+.then(data=>{
+  const list=document.getElementById("projectList");
+  if(!Array.isArray(data)||data.length===0){
+    list.innerHTML="<p class='loading'>No starred repositories yet. Star one on GitHub to see it here.</p>";
+    return;
+  }
+  let output="";
+  data.forEach(repo=>{
+    const lang=repo.language?"&#128296; "+repo.language:"";
+    const stars="&#11088; "+repo.stargazers_count;
+    const sep=lang?" &nbsp;&bull;&nbsp; ":"";
+    output+=`<div class="project"><h3>${repo.name}</h3><p>${repo.description||"No description available"}</p><p class="meta">${lang}${sep}${stars}</p><a class="repo-link" href="${repo.html_url}" target="_blank">View Repository &rarr;</a></div>`;
+  });
+  list.innerHTML=output;
+})
+.catch(()=>{
+  document.getElementById("projectList").innerHTML="<p class='loading'>Couldn't load projects right now. Please try again later.</p>";
+});
+fetch("https://api.github.com/users/PaulVMathew05/repos")
+.then(res=>res.json())
+.then(data=>{
+  let output="";
+  data.slice(0,6).forEach(repo=>{
+    output+=`<div class="github-project"><h3>${repo.name}</h3><p>${repo.description||"No description available"}</p><a style="color:#2563eb" href="${repo.html_url}" target="_blank">View Repository</a></div>`;
+  });
+  document.getElementById("repoList").innerHTML=output;
+});
+</script>
 </body>
 </html>
