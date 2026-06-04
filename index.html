@@ -26,13 +26,24 @@ nav a:hover{color:#2563eb;}
 .container{width:90%;max-width:1100px;margin:auto;padding:60px 0;opacity:0;transform:translateY(30px);animation:fadeIn 1s ease forwards;}
 @keyframes fadeIn{to{opacity:1;transform:translateY(0);}}
 .section-title{text-align:center;font-size:28px;margin-bottom:35px;}
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;}
+.featured{display:flex;flex-wrap:wrap;background:white;border-radius:16px;overflow:hidden;box-shadow:0 12px 45px rgba(37,99,235,0.18);border:2px solid #2563eb;margin-bottom:45px;}
+.featured-gallery{flex:1 1 340px;display:flex;flex-direction:column;gap:8px;padding:12px;background:#f8fafc;}
+.featured-gallery img{width:100%;height:175px;object-fit:cover;border-radius:8px;}
+.featured-info{flex:2 1 360px;padding:32px;display:flex;flex-direction:column;justify-content:center;}
+.featured-info h3{font-size:26px;color:#2563eb;margin:10px 0 14px;}
+.featured-info p{color:#475569;line-height:1.7;}
+.badge{align-self:flex-start;background:linear-gradient(135deg,#f59e0b,#f97316);color:white;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;box-shadow:0 4px 12px rgba(249,115,22,0.35);}
+.tags{margin-top:18px;}
+.tags span{display:inline-block;background:#e0f2fe;color:#0369a1;padding:5px 13px;border-radius:14px;font-size:12px;margin:4px 5px 0 0;font-weight:500;}
+.featured-info a.repo-link{margin-top:18px;align-self:flex-start;color:#2563eb;text-decoration:none;font-weight:600;font-size:14px;}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
 .project{background:white;padding:20px;border-radius:12px;box-shadow:0 5px 25px rgba(0,0,0,0.05);transition:all 0.3s ease;cursor:pointer;display:flex;flex-direction:column;}
 .project:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 15px 40px rgba(37,99,235,0.2);}
 .project h3{color:#2563eb;margin-bottom:8px;}
-.project .meta{font-size:13px;color:#64748b;margin-top:10px;}
+.project p{color:#475569;font-size:15px;line-height:1.6;}
+.gallery{display:flex;gap:10px;overflow-x:auto;margin-bottom:15px;}
+.gallery img{width:100%;height:150px;object-fit:cover;border-radius:6px;flex:1;}
 .project a.repo-link{display:inline-block;margin-top:14px;color:#2563eb;text-decoration:none;font-weight:600;font-size:14px;}
-.loading{text-align:center;color:#64748b;grid-column:1/-1;}
 .skills{text-align:center;}
 .skill{display:inline-block;background:#e2e8f0;padding:10px 18px;margin:6px;border-radius:20px;font-size:14px;}
 .certificates{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;}
@@ -40,7 +51,7 @@ nav a:hover{color:#2563eb;}
 .certificates img:hover{transform:scale(1.05);}
 .github-project{background:white;padding:18px;border-radius:10px;margin-bottom:15px;box-shadow:0 5px 20px rgba(0,0,0,0.05);}
 footer{background:white;text-align:center;padding:20px;color:#64748b;border-top:1px solid #e2e8f0;}
-@media(max-width:768px){.hero h1{font-size:28px;}.profile-pic{width:200px;}nav ul{display:none;}}
+@media(max-width:768px){.hero h1{font-size:28px;}.profile-pic{width:200px;}nav ul{display:none;}.featured-info{padding:24px;}}
 </style>
 </head>
 <body>
@@ -57,7 +68,7 @@ footer{background:white;text-align:center;padding:20px;color:#64748b;border-top:
 <section class="hero">
 <div class="profile-pic"><img src="photo.jpg"></div>
 <h1>Paul V Mathew</h1>
-<p>IoT • Embedded Systems • AI Hardware Engineer</p>
+<p>IoT &bull; Embedded Systems &bull; AI Hardware Engineer</p>
 <a class="btn" href="resume.pdf">Download Resume</a>
 </section>
 <div class="container">
@@ -68,11 +79,50 @@ Engineering student passionate about building intelligent hardware systems combi
 </div>
 <div class="container" id="projects">
 <h2 class="section-title">Projects</h2>
-<p style="text-align:center;color:#94a3b8;margin-top:-20px;margin-bottom:30px;font-size:14px">
-&#11088; Star any repository on GitHub and it appears here automatically.
-</p>
-<div class="projects" id="projectList">
-<p class="loading">Loading projects&hellip;</p>
+<div class="featured">
+<div class="featured-gallery">
+<img src="rehab1.jpg">
+<img src="rehab2.jpg">
+</div>
+<div class="featured-info">
+<span class="badge">&#11088; Best Project</span>
+<h3>RehabMate</h3>
+<p>An AI-powered physiotherapy platform for home-based push-up rehabilitation. It combines markerless pose estimation with ensemble machine-learning classification to evaluate and correct exercise form in real time, paired with custom assistive hardware. Developed as a research project built around a subject-aware evaluation framework for accurate, personalized form correction.</p>
+<div class="tags">
+<span>Pose Estimation</span>
+<span>Machine Learning</span>
+<span>Assistive Hardware</span>
+<span>Computer Vision</span>
+<span>Research</span>
+</div>
+</div>
+</div>
+<div class="projects">
+<div class="project">
+<div class="gallery">
+<img src="crop1.jpg">
+<img src="crop2.jpg">
+</div>
+<h3>CropXpert</h3>
+<p>A smart agriculture system that analyzes soil parameters and applies machine learning to recommend the most suitable crops to plant, helping make data-driven farming decisions.</p>
+</div>
+<div class="project">
+<div class="gallery">
+<img src="warehouse1.jpg">
+<img src="warehouse2.jpg">
+</div>
+<h3>Warehouse Automation with Autonomous Robots</h3>
+<p>An autonomous mobile robot (AMR) warehouse system simulated in NVIDIA Isaac Sim with ROS2 navigation. Features path planning, a photorealistic warehouse environment, and a live dashboard tracking robot performance and trajectories.</p>
+<a class="repo-link" href="https://github.com/PaulVMathew05/Warehouse-Automation-with-Autonomous-Robots" target="_blank">View Repository &rarr;</a>
+</div>
+<div class="project">
+<div class="gallery">
+<img src="https://raw.githubusercontent.com/PaulVMathew05/raytracer/main/image.png">
+</div>
+<h3>Ray Tracer</h3>
+<p>A 3D renderer built from scratch in C++ with no external graphics libraries. Implements ray&ndash;sphere intersection, recursive light bouncing, matte / metal / glass materials, anti-aliasing, and a camera with depth-of-field.</p>
+<a class="repo-link" href="https://github.com/PaulVMathew05/raytracer" target="_blank">View Repository &rarr;</a>
+</div>
 </div>
 </div>
 <div class="container skills" id="skills">
@@ -111,26 +161,6 @@ GitHub: <a style="color:#2563eb" href="https://github.com/PaulVMathew05">github.
 </div>
 <footer><p>&copy; 2026 Paul V Mathew</p></footer>
 <script>
-fetch("https://api.github.com/users/PaulVMathew05/starred")
-.then(res=>res.json())
-.then(data=>{
-  const list=document.getElementById("projectList");
-  if(!Array.isArray(data)||data.length===0){
-    list.innerHTML="<p class='loading'>No starred repositories yet. Star one on GitHub to see it here.</p>";
-    return;
-  }
-  let output="";
-  data.forEach(repo=>{
-    const lang=repo.language?"&#128296; "+repo.language:"";
-    const stars="&#11088; "+repo.stargazers_count;
-    const sep=lang?" &nbsp;&bull;&nbsp; ":"";
-    output+=`<div class="project"><h3>${repo.name}</h3><p>${repo.description||"No description available"}</p><p class="meta">${lang}${sep}${stars}</p><a class="repo-link" href="${repo.html_url}" target="_blank">View Repository &rarr;</a></div>`;
-  });
-  list.innerHTML=output;
-})
-.catch(()=>{
-  document.getElementById("projectList").innerHTML="<p class='loading'>Couldn't load projects right now. Please try again later.</p>";
-});
 fetch("https://api.github.com/users/PaulVMathew05/repos")
 .then(res=>res.json())
 .then(data=>{
